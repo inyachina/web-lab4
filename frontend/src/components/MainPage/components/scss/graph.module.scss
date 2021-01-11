@@ -1,0 +1,22 @@
+@import "src/varibales";
+
+.canvas_container{
+  position: relative;
+  @extend .box-container;
+}
+.main_graph_container{
+  position: relative;
+}
+.r_graph_container {
+  position: absolute;
+  left: 300px;
+  top: 300px;
+  z-index: 0;
+}
+
+.graph_container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 0;
+}

@@ -1,0 +1,36 @@
+@import "src/varibales";
+
+.table_container{
+  @extend .box-container;
+
+}
+.table_container::-webkit-scrollbar {
+  height: 0;
+}
+.table {
+  width: 102%;
+  color: white;
+  align-content: center;
+  //background: rgba(246, 246, 246, 0.1);
+  font: $sample_font;
+  border-collapse: collapse;
+  text-align: center;
+  //border: 2px double $;
+  overflow: scroll;
+  box-shadow:  2px 2px 10px 0px rgba(0,0,0,0.28);
+}
+.table th {
+  padding-top: 15px;
+  padding-bottom: 8px;
+  font:   small-caps bold 12px Arial, serif;
+  background: rgba(1,1,1,0.2);
+}
+
+.table td{
+  color: white;
+  padding: 2px 2px 4px 4px;
+}
+
+.table tr:hover{
+  background: rgba(1,1,1,0.2);
+}

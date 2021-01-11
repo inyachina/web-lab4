@@ -1,0 +1,155 @@
+@import  "~bootstrap/scss/bootstrap";
+
+$header_background: rgb(64, 64, 64);
+$box_background: rgb(81, 81, 81);
+$accent_color: rgba(190, 0, 0, 0.5);
+
+
+$sample_font: 14px "Lucida Sans Unicode", "Lucida Grande", Sans-Serif, serif;
+$font_color: #414141;
+
+$width: 1400px;
+
+$box_radius: 20px;
+$box_size: 30em;
+
+$coordinate_shadow_color: rgba(0, 0, 0, 0.3);
+//@function adaptSize($version, $value) {
+//  @if ($version=="computer") {
+//    @return $value;
+//  } @else if ($version=="mobile") {
+//    @return $value/3;
+//  } @else if ($version=="tablet") {
+//    @return $value*2;
+//  }
+//}
+
+.header_footer_container {
+  background: $header_background;
+  width: 100%;
+  left: 0;
+  height: 50px;
+  color: $accent_color;
+  -webkit-box-shadow: 2px -12px 24px -7px rgba(43, 41, 41, 0.38);
+}
+
+h1 {
+  font: 10em bold monospace, Sans-Serif;;
+  padding-left: 20px;
+  color: #4a4a4a;
+  text-shadow: 0px 0px 6px rgba(255, 255, 255, 0.7);
+}
+
+h2 {
+  //@extend .h1_text;
+  display: inline;
+  position: relative;
+  margin-bottom: 20px;
+
+  @media (min-width: 656px) and (max-width: 1200px) {
+    font-size: 70px;
+  }
+  @media (min-width: 1201px) and (max-width: 1400px) {
+    font-size: 70px;
+  }
+  @media (min-width: 1401px) {
+    font-size: 100px;
+  }
+  font-family: Helvetica, Sans-Serif, serif;
+  letter-spacing: -5px;
+  color: $box_background;
+}
+.coordinate_input {
+  padding: 10px;
+  outline: none;
+  border: none;
+  margin: 10px;
+  border-radius: 25px;
+  box-shadow: inset 2px 2px 2px 1px $coordinate_shadow_color;
+}
+
+.coordinate_input:hover {
+  cursor: pointer;
+}
+
+.coordinate_input:before {
+  box-shadow: -1px 4px 17px -1px rgba(0, 0, 0, 0.3);
+  background: $header_background * 1.3;
+}
+h2:after {
+  content: "coordinates";
+  position: absolute;
+  left: 5px;
+  top: 7px;
+  color: $accent_color;
+}
+
+.coordinates_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font: $sample_font;
+  color: $font_color;
+}
+
+.box-container {
+  margin: 5px;
+  @media (min-width: 656px) and (max-width: 1200px) {
+    width: 500px;
+    height: 500px;
+  }
+  @media (min-width: 1201px) and (max-width: 1600px) {
+    width: 400px;
+    height: 400px;
+  }
+  @media (min-width: 1601px) {
+    margin-top: 100px;
+    width: 35em;
+    height: 35em;
+  }
+  width: $box_size;
+  height: $box_size;
+  border-radius: $box_radius;
+  background: $box_background;
+  overflow: scroll;
+  -webkit-box-shadow: inset -1px 3px 11px 4px rgba(33, 29, 29, 0.36);
+}
+
+.box-container::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.box-container::-webkit-scrollbar-thumb {
+  background: rgb(167, 161, 161);
+  border-radius: 10px;
+}
+
+.box-container::-webkit-scrollbar-track {
+  background-color: rgba(184, 179, 179, 0.01);
+}
+
+.box-container::-webkit-scrollbar-corner {
+  background: rgba(252, 252, 252, 0.01);
+}
+.button {
+  background: rgba(1, 1, 1, 0.01);
+  padding: 5px 30px;
+  margin: 20px 10px;
+  font: $sample_font;
+  //text-transform: uppercase;
+  border-radius: 25px;
+  font-weight: bold;
+  box-shadow: inset 2px 2px 2px 2px rgba(1, 1, 1, 0.05);
+  border: 3px solid $header_background;
+  background: $header_background;
+  color: white;
+  outline: none;
+}
+
+.button:hover {
+  //border-color: ;
+  background: rgb(90, 90, 90);
+  cursor: pointer;
+}

@@ -1,0 +1,35 @@
+@import "src/varibales";
+
+
+.input_container{
+  position: relative;
+  display: grid;
+  justify-content: stretch;
+  align-items: center;
+  flex-wrap: wrap;
+  input{
+    background: rgba(1,1,1,0.01);
+    margin: 10px 5px;
+    border-radius: 15px;
+    padding: 2px;
+    outline: none;
+  }
+  input[type=submit]{
+    @extend .button;
+  }
+}
+
+
+.form_container{
+  display: grid;
+  background: rgba(1,1,1,0.6);
+  height: 40em;
+  width: 40em;
+  //display: block;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 120px 20px;
+  box-shadow: 2px 4px 15px gray;
+  border-radius: 15px;
+}
